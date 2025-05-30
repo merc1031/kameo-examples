@@ -1,0 +1,33 @@
+
+[package]
+name = "kameo-examples"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.86.0"
+
+[[example]]
+name = "tell-on-error-stops"
+path = "examples/tell_on_error_stops.rs"
+
+[[example]]
+name = "ask-early-reply-mimics-tell-stops"
+path = "examples/ask_early_reply_mimics_tell_stops.rs"
+
+[[example]]
+name = "tell-on-error-handled-in-on-panic"
+path = "examples/tell_on_error_handled_in_on_panic.rs"
+
+[[example]]
+name = "ask-early-reply-mimics-tell-handled-in-on-panic"
+path = "examples/ask_early_reply_mimics_tell_handled_in_on_panic.rs"
+
+[dependencies]
+anyhow = "1.0.79"
+kameo = "0.16.0"
+thiserror = '2.0.6'
+tokio = {version = "1.41.1", features = ["full", "test-util", "tracing"]}
+tracing = "0.1.40"
+tracing-core = "0.1.32"
+tracing-subscriber = {version = "0.3.18", features = ["env-filter", "json"]}
+
+
